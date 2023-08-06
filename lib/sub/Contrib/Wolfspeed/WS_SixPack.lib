@@ -29,13 +29,13 @@
 *******************************************************************************
 
 *********************************************************************
-****
+****	
 ****	Wolfspeed SiC Module Six-Pack SPICE Library
-****		Version 1.0	Date: 2023-05-03
-****
+****		Version RELEASE V1.1	Date: 2023-05-15
+****	
 ****		Models avilable in this library:
 ****		CCB021M12FM3,CCB032M12FM3
-****
+****	
 *********************************************************************
 **** Six Pack Module Layout ****
 ****  DC+1--DC+2--DC+3 ****
@@ -44,7 +44,7 @@
 ****  DC-1  DC-2   DC-3 ****
 ****  DC+1 / DC+2 / DC+3 are connected internally
 ****  DC-1 / DC-2 / DC-3 are disconnected internally
-****
+****	
 ****	Node Definitions:
 ****		Electrical
 ****		DC+1  = Q1 Drain (Phase 1)
@@ -61,7 +61,7 @@
 ****		TjQn  = Qn Junction Temperature
 ****		TcQn  = Qn Case Thermal Connection [apply coolant temperature as a voltage]
 ****		Electrical (EMI)
-****		Baseplate = Node for studying current induced
+****		Baseplate = Node for studying current induced 
 ****					through heatsink into grounding system
 *********************************************************************
 ****	Model Complexity Control:
@@ -87,8 +87,6 @@
 
 
 .SUBCKT Module_SixPack DC+1 DC+2 DC+3 DC-1 DC-2 DC-3 U V W G1 G2 G3 G4 G5 G6 K1 K2 K3 K4 K5 K6 TjQ1 TjQ2 TjQ3 TjQ4 TjQ5 TjQ6 TcQ1 TcQ2 TcQ3 TcQ4 TcQ5 TcQ6 Baseplate
-
-
 
 *** SiC MOSFETS ***
 * High Side *
@@ -159,7 +157,7 @@ C5 DC-1 Baseplate {CL1G}
 C6 DC-2 Baseplate {CL2G}
 C7 DC-3 Baseplate {CL3G}
 .ENDS
-
+ 
 *** SUBCKT 3/4: THERMALS ***
 .SUBCKT 3 Tj Tc Vd Vs Vi PARAMS: Ct1=1 Ct2=1 Ct3=1 Rt1=1 Rt2=1 Rt3=1
 Vt Tj1 0 {Tj}
@@ -178,38 +176,38 @@ Rt3 2 Tc {Rt3}
 RTground Tc 0 10k
 .ic V(Tj) = {Tj} V(1) = {Tj} V(2) = {Tj}
 .ENDS 4
-
+ 
 .SUBCKT CCB021M12FM3 DC+1 DC+2 DC+3 DC-1 DC-2 DC-3 U V W G1 G2 G3 G4 G5 G6 K1 K2 K3 K4 K5 K6 TjQ1 TjQ2 TjQ3 TjQ4 TjQ5 TjQ6 TcQ1 TcQ2 TcQ3 TcQ4 TcQ5 TcQ6 Baseplate
-
-*** Default Parameters ***
-
+ 
+*** Default Parameters *** 
+ 
 .param BPC=0 Thermals=1 level=3 Vths=0 Rdss=0 Rp=100 Tj={TEMP} Afm=1 AFnomM=1 die=10 LP1D=12.71n LP2D=11.12n LP3D=10.53n LP1S=5.74n LP2S=4.76n LP3S=4.62n LP1P=7.31n LP2P=8.30n LP3P=8.32n LD1D2=13.90n LD2D3=13.94n Rdesr=1.98m Rpesr=1.85m Rsesr=1.85m PackageRgi=0.00 DieRgi=3.30 LgQ1=14.85n LgQ2=15.51n LgQ3=14.96n LgQ4=14.84n LgQ5=14.84n LgQ6=15.10n Cug=52.70p Ca1g=30.20p Ca2g=30.30p Ca3g=32.10p Cl1g=17.80p Cl2g=19.30p Cl3g=21.70p Rt1={AFnomM*10.66m/AFm} Rt2={AFnomM*97.14m/AFm} Rt3={AFnomM*434.02m/AFm} Ct1={AFm*1.33m/AFnomM} Ct2={AFm*21.01m/AFnomM} Ct3={AFm*164.20m/AFnomM}
-
-*** Behavior Optimization ***
-
+ 
+*** Behavior Optimization *** 
+ 
 .param RgiPerDie = {PackageRgi+DieRgi}
 .param Rgi = {RgiPerDie/Afm}
-
-*** Module Subcircuit Call ***
-
+ 
+*** Module Subcircuit Call *** 
+ 
 X1 DC+1 DC+2 DC+3 DC-1 DC-2 DC-3 U V W G1 G2 G3 G4 G5 G6 K1 K2 K3 K4 K5 K6 TjQ1 TjQ2 TjQ3 TjQ4 TjQ5 TjQ6 TcQ1 TcQ2 TcQ3 TcQ4 TcQ5 TcQ6 Baseplate Module_SixPack PARAMS: BPC = {BPC+1} Thermal = {Thermals+3} die={die+level} Rdss={Rdss} Vths={Vths} AFm={AFm} Rp={Rp} Tj={Tj} LP1D={LP1D} LP2D={LP2D} LP3D={LP3D} LP1S={LP1S} LP2S={LP2S} LP3S={LP3S} LP1P={LP1P} LP2P={LP2P} LP3P={LP3P} LgQ1={LgQ1} LgQ2={LgQ2} LgQ3={LgQ3} LgQ4={LgQ4} LgQ5={LgQ5} LgQ6={LgQ6} LD1D2={LD1D2} LD2D3={LD2D3} Rdesr={Rdesr} Rpesr={Rpesr} Rsesr={Rsesr} Rgi={Rgi} Cug={Cug} Ca1g={Ca1g} Ca2g={Ca2g} Ca3g={Ca3g} Cl1g={Cl1g} Cl2g={Cl2g} Cl3g={Cl3g} Rt1={Rt1} Rt2={Rt2} Rt3={Rt3} Ct1={Ct1} Ct2={Ct2} Ct3={Ct3}
 
 .ENDS CCB021M12FM3
 
-
+ 
 .SUBCKT CCB032M12FM3 DC+1 DC+2 DC+3 DC-1 DC-2 DC-3 U V W G1 G2 G3 G4 G5 G6 K1 K2 K3 K4 K5 K6 TjQ1 TjQ2 TjQ3 TjQ4 TjQ5 TjQ6 TcQ1 TcQ2 TcQ3 TcQ4 TcQ5 TcQ6 Baseplate
-
-*** Default Parameters ***
-
+ 
+*** Default Parameters *** 
+ 
 .param BPC=0 Thermals=1 level=3 Vths=0 Rdss=0 Rp=100 Tj={TEMP} Afm=1 AFnomM=1 die=20 LP1D=12.71n LP2D=11.12n LP3D=10.53n LP1S=5.74n LP2S=4.76n LP3S=4.62n LP1P=7.31n LP2P=8.30n LP3P=8.32n LD1D2=13.90n LD2D3=13.94n Rdesr=1.98m Rpesr=1.85m Rsesr=1.85m PackageRgi=0.00 DieRgi=1.70 LgQ1=14.85n LgQ2=15.51n LgQ3=14.96n LgQ4=14.84n LgQ5=14.84n LgQ6=15.10n Cug=52.70p Ca1g=30.20p Ca2g=30.30p Ca3g=32.10p Cl1g=17.80p Cl2g=19.30p Cl3g=21.70p Rt1={AFnomM*14.48m/AFm} Rt2={AFnomM*128.68m/AFm} Rt3={AFnomM*482.49m/AFm} Ct1={AFm*963.54u/AFnomM} Ct2={AFm*14.88m/AFnomM} Ct3={AFm*135.20m/AFnomM}
-
-*** Behavior Optimization ***
-
+ 
+*** Behavior Optimization *** 
+ 
 .param RgiPerDie = {PackageRgi+DieRgi}
 .param Rgi = {RgiPerDie/Afm}
-
-*** Module Subcircuit Call ***
-
+ 
+*** Module Subcircuit Call *** 
+ 
 X1 DC+1 DC+2 DC+3 DC-1 DC-2 DC-3 U V W G1 G2 G3 G4 G5 G6 K1 K2 K3 K4 K5 K6 TjQ1 TjQ2 TjQ3 TjQ4 TjQ5 TjQ6 TcQ1 TcQ2 TcQ3 TcQ4 TcQ5 TcQ6 Baseplate Module_SixPack PARAMS: BPC = {BPC+1} Thermal = {Thermals+3} die={die+level} Rdss={Rdss} Vths={Vths} AFm={AFm} Rp={Rp} Tj={Tj} LP1D={LP1D} LP2D={LP2D} LP3D={LP3D} LP1S={LP1S} LP2S={LP2S} LP3S={LP3S} LP1P={LP1P} LP2P={LP2P} LP3P={LP3P} LgQ1={LgQ1} LgQ2={LgQ2} LgQ3={LgQ3} LgQ4={LgQ4} LgQ5={LgQ5} LgQ6={LgQ6} LD1D2={LD1D2} LD2D3={LD2D3} Rdesr={Rdesr} Rpesr={Rpesr} Rsesr={Rsesr} Rgi={Rgi} Cug={Cug} Ca1g={Ca1g} Ca2g={Ca2g} Ca3g={Ca3g} Cl1g={Cl1g} Cl2g={Cl2g} Cl3g={Cl3g} Rt1={Rt1} Rt2={Rt2} Rt3={Rt3} Ct1={Ct1} Ct2={Ct2} Ct3={Ct3}
 
 .ENDS CCB032M12FM3

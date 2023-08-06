@@ -1,3 +1,157 @@
+08/03/23 ADA4510 Corrected load current reflected through the positive and negative supplies.
+08/02/23 ADM705  new model
+08/02/23 ADM706  new model
+08/02/23 ADM707  new model
+08/02/23 ADM708  new model
+08/01/23 LTC3644 Improved convergence and fixed syntax errors.
+08/01/23 AD8411A Corrected output voltage clamp.
+08/01/23 ADAQ7768-1  new model
+07/28/23 LTC3721-1 Updated diode
+07/28/23 ADA4510 Added load current reflected through the supplies.
+07/28/23 AD734  new model
+07/28/23 AD8411A  new model
+07/27/23 ADA4510 Corrected common-mode rejection ratio and input resistance.
+07/25/23 LT4200 updated internal parameters
+07/25/23 LTC4214-1 updated internal parameters
+07/25/23 LTC4214-2 updated internal parameters
+07/25/23 LTC4215 updated internal parameters
+07/25/23 LTC4215-2 updated internal parameters
+07/25/23 LTC4217 updated internal parameters
+07/25/23 LTC4217-12 updated internal parameters
+07/25/23 LTC4218 updated internal parameters
+07/25/23 LTC4218-12 updated internal parameters
+07/25/23 LTC4219-12 updated internal parameters
+07/25/23 LTC4219-5 updated internal parameters
+07/25/23 LTC4232 updated internal parameters
+07/25/23 LTC4232-1 updated internal parameters
+07/25/23 LTC4233 updated internal parameters
+07/25/23 LTC4234 updated internal parameters
+07/25/23 LTC4238 updated internal parameters
+07/25/23 LTC4260 updated internal parameters
+07/25/23 LTC4286 updated internal parameters
+07/25/23 LT4363-1 updated internal parameters
+07/25/23 LT4363-2 updated internal parameters
+07/25/23 LTC4242 updated internal parameters
+07/25/23 LTM4702  new model
+07/24/23 ADA4610 Corrected supply current.
+07/24/23 LTC6373 Corrected input voltage range.
+07/24/23 ADG5208  new model
+07/24/23 ADGM1121  new model
+07/21/23 MAX17500  new model
+07/19/23 LTC4246 updated internal parameters
+07/19/23 LTC4279 updated internal parameters
+07/19/23 MAX14525 updated internal parameters
+07/19/23 MAX14575A updated internal parameters
+07/19/23 MAX14575AL updated internal parameters
+07/19/23 MAX14575B updated internal parameters
+07/19/23 MAX14575C updated internal parameters
+07/19/23 MAX15068 updated internal parameters
+07/19/23 MAX15069 updated internal parameters
+07/19/23 MAX15090B updated internal parameters
+07/19/23 MAX15090C updated internal parameters
+07/19/23 MAX15091 updated internal parameters
+07/19/23 MAX15091A updated internal parameters
+07/19/23 MAX15093 updated internal parameters
+07/19/23 MAX15093A updated internal parameters
+07/19/23 MAX15095 updated internal parameters
+07/19/23 MAX15095A updated internal parameters
+07/19/23 MAX15095D updated internal parameters
+07/19/23 MAX15096 updated internal parameters
+07/19/23 MAX15096A updated internal parameters
+07/19/23 MAX15096D updated internal parameters
+07/19/23 MAX16171 updated internal parameters
+07/19/23 MAX16545B updated internal parameters
+07/19/23 MAX16545C updated internal parameters
+07/19/23 MAX16550 updated internal parameters
+07/19/23 MAX17523 updated internal parameters
+07/19/23 MAX17523A updated internal parameters
+07/19/23 MAX17526A updated internal parameters
+07/19/23 MAX17561 updated internal parameters
+07/19/23 MAX17562 updated internal parameters
+07/19/23 MAX17563 updated internal parameters
+07/19/23 MAX17608 updated internal parameters
+07/19/23 MAX17609 updated internal parameters
+07/19/23 MAX17610 updated internal parameters
+07/19/23 MAX17612A updated internal parameters
+07/19/23 MAX17612B updated internal parameters
+07/19/23 MAX17612C updated internal parameters
+07/19/23 MAX17613A updated internal parameters
+07/19/23 MAX17613B updated internal parameters
+07/19/23 MAX17613C updated internal parameters
+07/19/23 MAX20313 updated internal parameters
+07/19/23 MAX20314 updated internal parameters
+07/19/23 MAX20315 updated internal parameters
+07/19/23 MAX20316 updated internal parameters
+07/19/23 MAX20337  new model
+07/19/23 ADA4510  new model
+07/17/23 LTM4668 Improved convergence. Updated pin numbers and the example circuit. 
+07/17/23 LTM4668A Improved convergence. Updated pin numbers and the example circuit. 
+07/14/23 LTC3621 Fixed PMOS Turn-On persistence when Vin is ramping slow
+07/12/23 LTC7150S Fix clock synchronization
+07/12/23 ADP1741  new model
+07/12/23 LTC7066  new model
+07/11/23 MAX16170 Correct function on second IN pin power-up
+07/11/23 MAX14779  new model
+07/10/23 LT4276A Updated obsolete BJT.
+07/10/23 MAX22288 Update Macromodel
+07/10/23 LTC3427-2  new model
+07/07/2023 2ndOrderAllpass Added input, load, simulation command, and "H" parameter.
+07/07/2023 2ndOrderBandpass  Added input, load, simulation command, and "H" parameter.
+07/07/2023 2ndOrderComplexzero Added input, load, simulation command, and "H" parameter.
+07/07/2023 2ndOrderHighpass Added input, load, simulation command, and "H" parameter.
+07/07/2023 2ndOrderLowpass Added input, load, simulation command, and "H" parameter.
+07/07/2023 2ndOrderNotch Added input, load, simulation command, and "H" parameter.
+07/05/23 MAX49925  new model
+07/03/23 AD630  new model
+07/01/23 MAX17640C Documented reference information and updated example circuit.
+07/01/23 MAX17640A  new model
+07/01/23 MAX17640B  new model
+07/01/23 MAX14774  new model
+06/28/23 AD8410A Added Vcm clamp.
+06/28/23 LT9890  new model
+06/27/23 LT1182 Application circuit modified for clarity.
+06/27/23 LTC4450 fix internal floating nodes
+06/27/23 LTC4451 Fix internal status pin
+06/26/23 Updated JFET device models from Linear Systems
+06/26/23 Added Chemi-Con inductors and capacitors
+06/26/23 ADuM4221-1A Update internal delay function
+06/26/23 ADG1408L  new model
+06/24/23 LT1028 Updated symbol to reference correct model.
+06/24/23 LTC7872  new model
+06/22/03 Updated application files to include full name of library devices
+06/22/23 AD5772R Missing Symbol
+06/22/23 ADP5055 Fix VFB2 by correcting CFG1 settings
+06/22/23 LT3097 updated application circuit
+06/22/23 LT3798 Updated the example circuit.
+06/22/23 LTC1874 revised application circuit
+06/22/23 LTC2903-A1 Modify sample macro-model for proper operation
+06/22/23 LTC2903-B1 Modify sample macro-model for proper operation
+06/22/23 LTC2903-C1 Modify sample macro-model for proper operation
+06/22/23 LTC2903-D1 Modify sample macro-model for proper operation
+06/22/23 LTC2903-E1 Modify sample macro-model for proper operation
+06/22/23 LTC3862-1 Improved convergence and updated example circuit.
+06/22/23 LTM4630-1 Modify internal test circuit
+06/22/23 LT1028 Improved accuracy of open loop gain/phase response.
+06/22/23 LT1360 revised application circuit
+06/22/23 LTC2642-14 updated application circuit
+06/22/23 LTC3548-2 Missing .sub file
+06/22/23 MAXM15062  new model
+06/22/23 MAXM15063  new model
+06/22/23 MAXM15064  new model
+06/22/23 MAX22088  new model
+06/22/23 MAX22288  new model
+06/13/23 LT1182 Application circuit modified for clarity.
+06/13/23 LT8648S Fix transient response and Negative Vout
+06/12/23 Minor updates to Wolfspeed library
+06/12/23 Added 1N4007 to standard library
+06/12/23 AD4000 Improved model convergence.
+06/12/23 AD4696 Modified noise in the model file
+06/12/23 LT1182 Updated BJT model for improved convergence.
+06/12/23 LT4295 update LT4295 Macromodel
+06/12/23 LT8609S Fixed Control loop parameters
+06/12/23 LTC7810 Fixed Duty Cycle Limit
+06/12/23 LTC7878 Split GND into SGND and PGND; Update application circuit Schottky diode
+06/12/23 AD8655  new model
 06/06/23 ADP5070 Fix EN1 and 2 Function
 06/06/23 LT8316 Fixed TIMER definition
 06/06/23 Updated Murata capacitors where required

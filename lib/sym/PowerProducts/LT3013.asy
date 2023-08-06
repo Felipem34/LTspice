@@ -6,7 +6,7 @@ WINDOW 0 0 -48 Center 2
 WINDOW 3 0 48 Center 2
 SYMATTR Value LT3013
 SYMATTR Prefix X
-SYMATTR SpiceModel LT3013.sub
+SYMATTR SpiceModel LT3013.lib
 SYMATTR Value2 LT3013
 SYMATTR Description 250mA, 4V to 80V Low Dropout µPower Linear Regulator with PWRGD
 PIN 144 -80 RIGHT 8
